@@ -1309,15 +1309,32 @@
                             <i class="fas fa-shopping-bag"></i>
                             Shop Collection
                         </a>
-                       <a
-  class="btn-shop external" 
-  href="https://graceandgrind.org/collections/all"
-  target="_blank" 
-  rel="noopener noreferrer"
-  onclick="window.open(this.href, '_blank'); return false;"
->
-  Shop Shopify
-</a>
+                       <<!-- START: Shopify Buy Button embed -->
+<div id="shopify-embed-all-products"></div>
+<script>
+/* Paste the entire Buy Button code from Shopify here.
+   It will look like:
+   <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+   <script>
+     (function () {
+       var client = ShopifyBuy.buildClient({
+         domain: 'YOUR-SHOP.myshopify.com',
+         storefrontAccessToken: 'YOUR_TOKEN'
+       });
+       ShopifyBuy.UI.onReady(client).then(function (ui) {
+         ui.createComponent('collection', {
+           id: 'YOUR_COLLECTION_ID',
+           node: document.getElementById('shopify-embed-all-products'),
+           moneyFormat: '%24%7B%7Bamount%7D%7D',
+           options: { /* layout, button text/colors, etc. */ }
+         });
+       });
+     })();
+   </script>
+*/
+</script>
+<!-- END: Shopify Buy Button embed -->
+
 
 
 
