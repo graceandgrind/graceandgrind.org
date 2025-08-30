@@ -1,0 +1,2560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grace & Grind - Where faith meets entrepreneurship. Premium faith-based products and inspiration for Christian business leaders building kingdom enterprises.">
+    <meta name="keywords" content="faith-based business, Christian entrepreneur, faith and business, kingdom entrepreneurship, Christian leadership, faith-driven success">
+    <meta property="og:title" content="Grace & Grind - Faith that plans. Grace that grinds.">
+    <meta property="og:description" content="Empowering Christian entrepreneurs with faith-based products, business inspiration, and kingdom-minded community.">
+    <meta property="og:type" content="website">
+    
+    <title>Grace & Grind - Faith that plans. Grace that grinds.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --primary-dark: #1B5E20;
+            --primary-light: #4CAF50;
+            --secondary-color: #000000;
+            --accent-color: #FFD700;
+            --accent-secondary: #FFA726;
+            --accent-tertiary: #FF6B35;
+
+            --background-dark: #0A0A0A;
+            --background-mid: #121212;
+            --background-card: #1E1E1E;
+            --background-glass: rgba(30, 30, 30, 0.85);
+            --background-light: #2A2A2A;
+            --background-soft: #F8F9FA;
+
+            --text-primary: #FFFFFF;
+            --text-secondary: #E0E0E0;
+            --text-muted: #B0B0B0;
+            --text-dark: #212121;
+            --text-accent: var(--accent-color);
+
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+            --gradient-hero: linear-gradient(135deg, #000000 0%, #1A1A1A 50%, #2A2A2A 100%);
+            --gradient-section: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%);
+            --gradient-card: linear-gradient(135deg, #1E1E1E 0%, #2A2A2A 100%);
+            --gradient-gold: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+
+            --shadow-soft: 0 4px 20px rgba(0,0,0,0.15);
+            --shadow-medium: 0 8px 40px rgba(0,0,0,0.25);
+            --shadow-hard: 0 20px 60px rgba(0,0,0,0.4);
+            --shadow-glow: 0 0 40px rgba(46,125,50,0.4);
+            --shadow-gold: 0 0 30px rgba(255,215,0,0.3);
+
+            --border-radius: 16px;
+            --border-radius-large: 24px;
+            --border-radius-xl: 32px;
+
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', serif;
+            --font-modern: 'Space Grotesk', sans-serif;
+
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-elastic: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            --container-padding: clamp(1.5rem, 5vw, 5rem);
+            --section-padding: clamp(5rem, 10vw, 10rem);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-dark);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Enhanced Announcement Bar */
+        .announcement-bar {
+            position: fixed; left: 0; right: 0;
+            top: 0;
+            z-index: 4000;
+            background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+            background-size: 200% 100%;
+            animation: gradientShift 12s ease-in-out infinite;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .announcement-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            white-space: nowrap;
+            animation: slideAnnouncement 80s linear infinite;
+            gap: 4rem;
+        
+    will-change: transform;
+    min-width: max-content;
+}
+
+        @-webkit-keyframes slideAnnouncement {
+    0% { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes slideAnnouncement {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+            100% { transform: translateX(-100%); }
+        }
+
+        .announcement-content {
+            animation: slideAnnouncement 80s linear infinite;
+        
+    will-change: transform;
+    min-width: max-content;
+}
+
+        .announcement-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .announcement-close {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0.7;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .announcement-close:hover {
+            opacity: 1;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-to-top:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Enhanced Header */
+        .header {
+            position: fixed;
+            top: 60px;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(25px) saturate(180%);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            min-height: 85px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition-elastic);
+        }
+
+        .logo-img {
+            width: 65px;
+            height: 65px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-elastic);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .logo:hover .logo-img {
+            transform: rotate(10deg) scale(1.1);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            transition: var(--transition-smooth);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Enhanced Mega Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-card);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--border-radius-large);
+            padding: 2rem;
+            box-shadow: var(--shadow-medium);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 2000;
+            min-width: 700px;
+            margin-top: 1rem;
+        }
+
+        .dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .mega-section h4 {
+            color: var(--accent-color);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mega-section a {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: var(--transition-smooth);
+            margin-bottom: 0.5rem;
+        }
+
+        .mega-section a:hover {
+            background: rgba(255,255,255,0.08);
+            color: var(--text-primary);
+            transform: translateX(5px);
+        }
+
+        .mega-section a i {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .mega-section a strong {
+            display: block;
+            margin-bottom: 0.2rem;
+            color: var(--text-primary);
+        }
+
+        .mega-section a small {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* Enhanced Buttons */
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-elastic);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-family: var(--font-primary);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gradient-accent);
+            color: var(--background-dark);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .btn-shopify {
+            background: linear-gradient(135deg, #96BF47 0%, #7AB800 100%);
+            color: white;
+            border: 2px solid transparent;
+        }
+
+        .btn-shopify:hover {
+            background: linear-gradient(135deg, #7AB800 0%, #96BF47 100%);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 30px rgba(150, 191, 71, 0.4);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.8rem;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: var(--border-radius);
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--gradient-card);
+            backdrop-filter: blur(25px);
+            padding: 8rem 2rem 2rem;
+            transition: right 0.4s ease;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition-smooth);
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient-hero);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 16rem 0 8rem;
+            margin-top: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(46, 125, 50, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-weight: 900;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 50%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            to { text-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(46, 125, 50, 0.4); }
+        }
+
+        .hero .tagline {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 4vw, 2.5rem);
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .hero .description {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            margin-bottom: 3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Enhanced Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .enhanced-card {
+            background: var(--gradient-card);
+            border-radius: var(--border-radius-xl);
+            padding: 2.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition-elastic);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enhanced-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .enhanced-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .enhanced-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .enhanced-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .enhanced-card p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .product-card {
+            background: var(--gradient-card);
+            border-radius: var(--border-radius-xl);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition-elastic);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image i {
+            font-size: 3rem;
+            transition: var(--transition-smooth);
+        }
+
+        .product-card:hover .product-image i {
+            transform: scale(1.1);
+            color: var(--accent-color);
+        }
+
+        .product-title {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Collection Categories */
+        .collection-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .category-card {
+            background: var(--gradient-card);
+            border-radius: var(--border-radius-large);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition-elastic);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .category-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .category-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Enhanced Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: var(--border-radius);
+            background: rgba(255,255,255,0.05);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 0 20px rgba(46, 125, 50, 0.2);
+        }
+
+        /* Faith Section */
+        .faith-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        .faith-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .faith-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            color: #1a1a1a;
+            padding: 2rem;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .faith-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-display);
+        }
+
+        /* Notification System */
+        .notification {
+            position: fixed;
+            top: 160px;
+            right: 20px;
+            background: var(--gradient-card);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            z-index: 10000;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            max-width: 400px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--background-dark);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-display);
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            display: block;
+            padding: 0.3rem 0;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition-elastic);
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .mega-menu {
+                min-width: 500px;
+            }
+            
+            .mega-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .announcement-bar {
+                height: 50px;
+                font-size: 0.8rem;
+            }
+            
+            .header {
+                top: 50px;
+            }
+            
+            .hero {
+                margin-top: 50px;
+                padding: 12rem 0 6rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .card-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .faith-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .mega-menu {
+                min-width: 300px;
+                left: 0;
+                right: 0;
+                transform: none;
+                margin: 0 1rem;
+            }
+            
+            .mega-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 10rem 0 5rem;
+            }
+            
+            :root {
+                --section-padding: 3rem;
+                --container-padding: 1rem;
+            }
+            
+            .enhanced-card,
+            .product-card,
+            .faith-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+            
+            .announcement-content {
+                animation: none;
+            
+    will-change: transform;
+    min-width: max-content;
+}
+        }
+
+        /* Focus styles for accessibility */
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        a:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Skip to main content */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent-color);
+            color: var(--background-dark);
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            z-index: 10001;
+            font-weight: 600;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 70px;
+        }
+    
+/* --- GG tweak: hide all single-collection blocks from the homepage layout --- */
+.collection-section { display: none !important; }
+
+
+/* --- GG add: Impact section styles (scoped classes) --- */
+.impact-section { background: var(--background-mid); padding: var(--section-padding) 0; }
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.metric-card { background: var(--background-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem; text-align: center; }
+.metric-value { font-size: 2rem; font-weight: 800; color: var(--accent-color); line-height: 1.1; }
+.metric-label { font-size: 0.95rem; opacity: 0.85; margin-top: 0.25rem; }
+    
+
+/* --- GG add: Testimonials section styles (scoped) --- */
+.testimonials-section { background: var(--background-dark); padding: var(--section-padding) 0; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+.testimonial-card { background: var(--background-card); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.25rem; }
+.testimonial-quote { font-style: italic; line-height: 1.5; }
+.testimonial-author { margin-top: 0.75rem; font-weight: 600; opacity: 0.9; }
+    
+
+/* --- Mobile refinements --- */
+@media (max-width: 768px) {
+  /* Keep announcement moving & readable on mobile */
+  .announcement-bar { height: 56px; }
+  .announcement-content {
+    -webkit-animation: slideAnnouncement 80s linear infinite;
+            animation: slideAnnouncement 80s linear infinite;
+  }
+
+  /* Stack two-column grids to single column */
+  #bulk-orders .container > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  #contact .container > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Simplify footer on mobile */
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  /* Keep first four sections (Brand, Shop, Support, Contact); hide the rest */
+  .footer-content > .footer-section:nth-of-type(n+5) {
+    display: none !important;
+  }
+  .social-link { width: 40px; height: 40px; font-size: 1rem; }
+}
+
+</style>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Enhanced Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="announcement-content">
+            <div class="announcement-item">
+                <i class="fas fa-shipping-fast"></i>
+                <span>🚚 FREE Shipping on orders $65+</span>
+            </div>
+            <div class="announcement-item">
+                <i class="fas fa-users"></i>
+                <span>💼 Bulk & Custom Orders Available</span>
+            </div>
+            <div class="announcement-item">
+                <i class="fas fa-heart"></i>
+                <span>✨ Join our Faith Community</span>
+            </div>
+            <div class="announcement-item">
+                <i class="fas fa-star"></i>
+                <span>🆕 New Drops Every Friday</span>
+            </div>
+            <div class="announcement-item">
+                <i class="fas fa-praying-hands"></i>
+                <span>🙏 Faith-Forward Designs</span>
+            </div>
+        </div>
+        <button class="announcement-close" onclick="closeAnnouncementBar()" aria-label="Close announcement">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Enhanced Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="#home" class="logo">
+                <div class="logo-img">G&G</div>
+                <span>GRACE & GRIND</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="#shop"><span>Shop</span> <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-content">
+                            <div class="mega-section">
+                                <h4>Apparel Collections</h4>
+                                <a href="#apparel-adult">
+                                    <i class="fas fa-tshirt"></i>
+                                    <div>
+                                        <strong>Adult Collection</strong>
+                                        <small>Premium tees, hoodies & faith-forward designs</small>
+                                    </div>
+                                </a>
+                                <a href="#apparel-youth">
+                                    <i class="fas fa-user-group"></i>
+                                    <div>
+                                        <strong>Youth Collection</strong>
+                                        <small>Bold designs for young believers</small>
+                                    </div>
+                                </a>
+                                <a href="#apparel-kids">
+                                    <i class="fas fa-child"></i>
+                                    <div>
+                                        <strong>Kids Collection</strong>
+                                        <small>Playful & durable faith-based clothing</small>
+                                    </div>
+                                </a>
+                                <a href="#apparel-baby">
+                                    <i class="fas fa-baby"></i>
+                                    <div>
+                                        <strong>Baby Collection</strong>
+                                        <small>Little lights of Jesus - soft & safe</small>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="mega-section">
+                                <h4>Lifestyle & Accessories</h4>
+                                <a href="#lifestyle-accessories">
+                                    <i class="fas fa-gem"></i>
+                                    <div>
+                                        <strong>Accessories & More</strong>
+                                        <small>Hats, mugs & faith-inspired extras</small>
+                                    </div>
+                                </a>
+                                <a href="#lifestyle-home">
+                                    <i class="fas fa-house"></i>
+                                    <div>
+                                        <strong>Home & Living</strong>
+                                        <small>Faith in every room</small>
+                                    </div>
+                                </a>
+                                <a href="#lifestyle-leather">
+                                    <i class="fas fa-briefcase"></i>
+                                    <div>
+                                        <strong>Premium Leather</strong>
+                                        <small>Luxury goods - Coming Soon</small>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="mega-section">
+                                <h4>Special Collections</h4>
+                                <a href="#new-arrivals">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <strong>New Arrivals</strong>
+                                        <small>Fresh drops & latest designs</small>
+                                    </div>
+                                </a>
+                                <a href="#best-sellers">
+                                    <i class="fas fa-fire"></i>
+                                    <div>
+                                        <strong>Best Sellers</strong>
+                                        <small>Community favorites</small>
+                                    </div>
+                                </a>
+                                <a href="#gift-sets">
+                                    <i class="fas fa-gift"></i>
+                                    <div>
+                                        <strong>Gift Sets</strong>
+                                        <small>Perfect faith-based bundles</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="#daily-faith">Daily Faith</a></li>
+                <li><a href="#bulk-orders">Bulk Orders</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#shop" onclick="closeMobileMenu()">Shop Collections</a></li>
+            <li><a href="#daily-faith" onclick="closeMobileMenu()">Daily Faith</a></li>
+            <li><a href="#bulk-orders" onclick="closeMobileMenu()">Bulk Orders</a></li>
+            <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <!-- Enhanced Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>GRACE & GRIND</h1>
+                    <p class="tagline">Faith that plans. Grace that grinds.</p>
+                    <p class="description">
+                        Premium Christian apparel and lifestyle essentials crafted to reflect your faith with style and purpose. 
+                        Every piece tells a story worth sharing and inspires kingdom-minded conversations wherever you go.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#shop" class="btn btn-primary">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Collection
+                        </a>
+                       <a
+  class="btn-shop external" 
+  href="https://graceandgrind.org/collections/all"
+  target="_blank" 
+  rel="noopener noreferrer"
+  onclick="window.open(this.href, '_blank'); return false;"
+>
+  Shop Shopify
+</a>
+
+
+
+                        <a href="#bulk-orders" class="btn btn-secondary">
+                            <i class="fas fa-users"></i>
+                            Bulk Orders
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="impact" class="impact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Impact</h2>
+                    <p class="section-subtitle">Thanks to your support, Grace &amp; Grind invests back into communities.</p>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">2%</div>
+                        <div class="metric-label">of every purchase donated</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">—</div>
+                        <div class="metric-label">Youth trained (update)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">—</div>
+                        <div class="metric-label">Families supported (update)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">—</div>
+                        <div class="metric-label">Projects funded (update)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- About + Mission Section -->
+        <section id="about" style="background: var(--background-dark); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Grace & Grind</h2>
+                    <p class="section-subtitle">We create premium, faith-forward apparel and lifestyle goods that spark kingdom-minded conversations—at work, at church, and in the world.</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="enhanced-card">
+                        <i class="fas fa-users card-icon"></i>
+                        <h3>Who We Are</h3>
+                        <p>Grace & Grind is where excellence meets purpose. We believe faith isn't an afterthought—it's your unfair advantage. Our products are designed to look good, feel great, and boldly represent your calling.</p>
+                    
+                    <div class="enhanced-card">
+                        <i class="fas fa-hand-holding-heart card-icon"></i>
+                        <h3>2% to InHand Ethiopia</h3>
+                        <p>We donate <strong>2%</strong> of every purchase to <a href="https://inhandethiopia.org" target="_blank" rel="noopener">InHand Ethiopia</a>—supporting youth job creation and community uplift.</p>
+                    </div>
+        </div>
+                    <div class="enhanced-card">
+                        <i class="fas fa-hammer card-icon"></i>
+                        <h3>What We Do</h3>
+                        <p>From everyday tees and hoodies to curated gift sets, we craft durable, print-reliable designs with premium blanks and a modern aesthetic—so your faith speaks before you say a word.</p>
+                    </div>
+                    <div class="enhanced-card">
+                        <i class="fas fa-heart card-icon"></i>
+                        <h3>Our Mission</h3>
+                        <p>To empower believers to live their faith boldly through excellent products, intentional design, and service—fueling generosity, conversation, and kingdom impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Our Collections (E-commerce Platforms Section) -->
+        <section style="background: var(--gradient-section); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Shop Our Collections</h2>
+                    <p class="section-subtitle">Find Grace & Grind products across multiple trusted platforms, all powered by premium quality and kingdom purpose.</p>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="enhanced-card">
+                        <i class="fab fa-shopify card-icon"></i>
+                        <h3>Shopify Store</h3>
+                        <p>Our main collection with exclusive designs, early access to new drops, and member benefits.</p>
+                        <a href="https://graceandgrind.myshopify.com" class="btn btn-shopify" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i>
+                            Shop Shopify
+                        </a>
+                    </div>
+
+                    <div class="enhanced-card">
+                        <i class="fab fa-amazon card-icon"></i>
+                        <h3>Amazon Store</h3>
+                        <p>Fast Prime shipping, easy returns, and our most popular faith-based apparel designs.</p>
+                        <button class="btn btn-secondary" onclick="showNotification('Amazon store launching soon! Join our community for updates.', 'info')">
+                            <i class="fas fa-clock"></i>
+                            Coming Soon
+                        </button>
+                    </div>
+
+                    <div class="enhanced-card">
+                        <i class="fab fa-etsy card-icon"></i>
+                        <h3>Etsy Shop</h3>
+                        <p>Handcrafted items, custom designs, and personalized faith-based gifts for every occasion.</p>
+                        <button class="btn btn-secondary" onclick="showNotification('Etsy shop launching soon! Sign up for early access.', 'info')">
+                            <i class="fas fa-clock"></i>
+                            Coming Soon
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Collections Section -->
+        <section id="shop" style="background: var(--gradient-section); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Shop Collections</h2>
+                    <p class="section-subtitle">Discover our complete range of faith-inspired products, from apparel to lifestyle essentials</p>
+                </div>
+
+                <!-- Collection Categories -->
+                <div class="collection-categories">
+                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/adult" target="_blank" rel="noopener">
+                        <i class="fas fa-tshirt category-icon"></i>
+                        <h4>Adult Collection</h4>
+                        <p>Premium tees & hoodies</p>
+                    </a>
+                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/youth" target="_blank" rel="noopener">
+                        <i class="fas fa-user-group category-icon"></i>
+                        <h4>Youth Collection</h4>
+                        <p>Bold faith-forward designs</p>
+                    </a>
+                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/kids" target="_blank" rel="noopener">
+                        <i class="fas fa-child category-icon"></i>
+                        <h4>Kids Collection</h4>
+                        <p>Playful & durable</p>
+                    </a>
+                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/baby" target="_blank" rel="noopener">
+                        <i class="fas fa-baby category-icon"></i>
+                        <h4>Baby Collection</h4>
+                        <p>Little lights of Jesus</p>
+                    </a>
+                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/accessories" target="_blank" rel="noopener">
+                        <i class="fas fa-gem category-icon"></i>
+                        <h4>Accessories</h4>
+                        <p>Hats, mugs & more</p>
+                    </a>
+                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/new-arrivals" target="_blank" rel="noopener">
+                        <i class="fas fa-star category-icon"></i>
+                        <h4>New Arrivals</h4>
+                        <p>Latest drops</p>
+                    </a>
+                </div>
+
+                <!-- Featured Products -->
+                <div class="section-header" style="margin-top: 5rem;">
+                    <h3 class="section-title" style="font-size: 2.5rem;">Featured Products</h3>
+                    <p class="section-subtitle">Our most popular faith-inspired designs</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3 class="product-title">"Built by His Hands" Hoodie</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Cozy heavyweight fleece with inspiring message</p>
+                        <div class="product-price">$59</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-cart-plus"></i> Shop Now
+                            </a>
+                            <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
+                                Bulk Order
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-hat-baseball"></i>
+                        </div>
+                        <h3 class="product-title">Grace & Grind Cap</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Minimal design, maximum statement</p>
+                        <div class="product-price">$24</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-cart-plus"></i> Shop Now
+                            </a>
+                            <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
+                                Bulk Order
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3 class="product-title">"God's Masterpiece" Infant Bodysuit</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Soft, breathable fabric with Scripture</p>
+                        <div class="product-price">$19</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-cart-plus"></i> Shop Now
+                            </a>
+                            <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
+                                Bulk Order
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3 class="product-title">"Fear God, Honor All" T-Shirt</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Bold biblical statement (1 Peter 2:17)</p>
+                        <div class="product-price">$29</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-cart-plus"></i> Shop Now
+                            </a>
+                            <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
+                                Bulk Order
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-sweatshirt"></i>
+                        </div>
+                        <h3 class="product-title">Grace & Grind Crewneck</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Premium cotton blend sweatshirt</p>
+                        <div class="product-price">$45</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-cart-plus"></i> Shop Now
+                            </a>
+                            <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
+                                Bulk Order
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-hoodie"></i>
+                        </div>
+                        <h3 class="product-title">"Faith Over Fear" Hoodie</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Inspirational message hoodie</p>
+                        <div class="product-price">$55</div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                                <i class="fas fa-cart-plus"></i> Shop Now
+                            </a>
+                            <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
+                                Bulk Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Sections -->
+        <!-- New Arrivals -->
+        <section class="collection-section" id="new-arrivals" style="background: var(--gradient-section); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">New Arrivals</h2>
+                    <p class="section-subtitle">Fresh drops and latest faith-inspired designs</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-star" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="product-title">New Drop Collection</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Latest faith-inspired designs</p>
+                        <div class="product-price">Starting at $25</div>
+                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-shopping-bag"></i> Shop Youth
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-section" id="apparel-kids" style="background: var(--gradient-section); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Kids Collection</h2>
+                    <p class="section-subtitle">Playful and durable faith-based clothing for children</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-child" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="product-title">Kids Faith Wear</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Fun designs that teach biblical values</p>
+                        <div class="product-price">$20 - $35</div>
+                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-shopping-bag"></i> Shop Kids
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-section" id="apparel-baby" style="background: var(--background-dark); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Baby Collection</h2>
+                    <p class="section-subtitle">Little lights of Jesus - soft, safe, and adorable</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-baby" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="product-title">Baby Bodysuits & Onesies</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Soft organic cotton with sweet Scripture</p>
+                        <div class="product-price">$15 - $25</div>
+                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-shopping-bag"></i> Shop Baby
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lifestyle Collections -->
+        <section class="collection-section" id="lifestyle-leather" style="background: var(--gradient-section); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Premium Leather Collection</h2>
+                    <p class="section-subtitle">Luxury leather goods crafted with kingdom purpose - Coming Soon</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-briefcase" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="product-title">Coming Soon</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Luxury leather goods with faith-inspired details</p>
+                        <button class="btn btn-secondary" onclick="showNotification('Premium leather collection launching soon! Join our newsletter for updates.', 'info')" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-clock"></i> Notify Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-section" id="lifestyle-accessories" style="background: var(--background-dark); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Accessories & More</h2>
+                    <p class="section-subtitle">Hats, mugs, and faith-inspired extras</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-hat-baseball" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="product-title">Faith Caps & Hats</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Stylish headwear with kingdom messages</p>
+                        <div class="product-price">$20 - $30</div>
+                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-shopping-bag"></i> Shop Accessories
+                        </a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mug-hot" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="product-title">Inspirational Mugs</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Start your day with faith and coffee</p>
+                        <div class="product-price">$15 - $20</div>
+                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-shopping-bag"></i> Shop Mugs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-section" id="lifestyle-home" style="background: var(--gradient-section); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Home & Living</h2>
+                    <p class="section-subtitle">Faith in every room - home decor and lifestyle essentials</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-house" style="font-size: 3rem;"></i>
+                        </div>
+                        <h3 class="product-title">Home Essentials</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Transform your space with faith-inspired decor</p>
+                        <div class="product-price">Starting at $15</div>
+                        <button class="btn btn-secondary" onclick="showNotification('Home collection launching soon! Stay tuned for updates.', 'info')" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E-commerce Platforms Section -->
+        <section style="background: var(--background-dark); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Shop Our Collections</h2>
+                    <p class="section-subtitle">Find Grace & Grind products across multiple trusted platforms, all powered by premium quality and kingdom purpose.</p>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="enhanced-card">
+                        <i class="fab fa-shopify card-icon"></i>
+                        <h3>Shopify Store</h3>
+                        <p>Our main collection with exclusive designs, early access to new drops, and member benefits.</p>
+                        <a href="https://graceandgrind.myshopify.com" class="btn btn-shopify" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i>
+                            Shop Shopify
+                        </a>
+                    </div>
+
+                    <div class="enhanced-card">
+                        <i class="fab fa-amazon card-icon"></i>
+                        <h3>Amazon Store</h3>
+                        <p>Fast Prime shipping, easy returns, and our most popular faith-based apparel designs.</p>
+                        <button class="btn btn-secondary" onclick="showNotification('Amazon store launching soon! Join our community for updates.', 'info')">
+                            <i class="fas fa-clock"></i>
+                            Coming Soon
+                        </button>
+                    </div>
+
+                    <div class="enhanced-card">
+                        <i class="fab fa-etsy card-icon"></i>
+                        <h3>Etsy Shop</h3>
+                        <p>Handcrafted items, custom designs, and personalized faith-based gifts for every occasion.</p>
+                        <button class="btn btn-secondary" onclick="showNotification('Etsy shop launching soon! Sign up for early access.', 'info')">
+                            <i class="fas fa-clock"></i>
+                            Coming Soon
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Faith & Inspiration Section -->
+        <section class="faith-section" id="daily-faith">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" style="color: white;">Daily Faith & Inspiration</h2>
+                    <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Start your day with God's word and entrepreneurial wisdom</p>
+                </div>
+                
+                <div class="faith-grid">
+                    <div class="faith-card">
+                        <h3><i class="fas fa-bible"></i> Today's Scripture</h3>
+                        <div id="daily-verse" style="font-style: italic; margin: 1rem 0; color: #4b5563;">
+                            "I can do all things through Christ who strengthens me." - Philippians 4:13
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <button class="btn" style="padding: 0.7rem 1.2rem; background: #f3f4f6; color: #374151; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;" onclick="rotateVerse()">
+                                <i class="fas fa-refresh"></i> New Verse
+                            </button>
+                            <button class="btn" style="padding: 0.7rem 1.2rem; background: #667eea; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;" onclick="shareVerse()">
+                                <i class="fas fa-share"></i> Share
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="faith-card">
+                        <h3><i class="fas fa-heart"></i> Daily Affirmation</h3>
+                        <div id="daily-affirmation" style="margin: 1rem 0; color: #4b5563;">
+                            I am fearfully and wonderfully made, equipped to impact the world through my gifts and calling.
+                        </div>
+                        <div>
+                            <button class="btn" style="padding: 0.7rem 1.2rem; background: #f3f4f6; color: #374151; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;" onclick="rotateAffirmation()">
+                                <i class="fas fa-refresh"></i> New Affirmation
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="faith-card">
+                        <h3><i class="fas fa-praying-hands"></i> Prayer Requests</h3>
+                        <textarea id="prayer-request" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-family: var(--font-primary); margin-bottom: 1rem;" placeholder="Share your prayer request with our community..." rows="4"></textarea>
+                        <div>
+                            <button class="btn" style="padding: 0.7rem 1.2rem; background: #667eea; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;" onclick="submitPrayer()">
+                                <i class="fas fa-paper-plane"></i> Submit Prayer
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="faith-card">
+                        <h3><i class="fas fa-lightbulb"></i> Entrepreneur Quote</h3>
+                        <div id="daily-quote" style="font-style: italic; margin: 1rem 0; color: #4b5563;">
+                            "Success is not just about what you accomplish in your life, but what you inspire others to do." - Grace & Grind
+                        </div>
+                        <div>
+                            <button class="btn" style="padding: 0.7rem 1.2rem; background: #f3f4f6; color: #374151; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;" onclick="rotateQuote()">
+                                <i class="fas fa-refresh"></i> New Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bulk Orders Section -->
+        <section id="bulk-orders" style="background: var(--background-dark); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Bulk & Custom Orders</h2>
+                    <p class="section-subtitle">Outfit your team, church, or event with purpose-driven apparel and meaningful gifts</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                    <div>
+                        <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--text-primary); margin-bottom: 2rem;">Why Choose Our Bulk Service?</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <i class="fas fa-check-circle" style="color: var(--primary-color); font-size: 1.3rem;"></i>
+                                <span style="color: var(--text-secondary);">Premium blanks and durable prints</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <i class="fas fa-palette" style="color: var(--primary-color); font-size: 1.3rem;"></i>
+                                <span style="color: var(--text-secondary);">Gold/black brand palette or your custom colors</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <i class="fas fa-shipping-fast" style="color: var(--primary-color); font-size: 1.3rem;"></i>
+                                <span style="color: var(--text-secondary);">Fast proofs and dedicated support</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <i class="fas fa-dollar-sign" style="color: var(--primary-color); font-size: 1.3rem;"></i>
+                                <span style="color: var(--text-secondary);">Volume pricing starting at 25+ items</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <i class="fas fa-cross" style="color: var(--primary-color); font-size: 1.3rem;"></i>
+                                <span style="color: var(--text-secondary);">Scripture integration and faith-based designs</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="enhanced-card">
+                        <form id="bulk-form" onsubmit="handleBulkSubmit(event)">
+                            <div class="form-group">
+                                <label for="bulk-name">Full Name *</label>
+                                <input type="text" id="bulk-name" required placeholder="Your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bulk-email">Email Address *</label>
+                                <input type="email" id="bulk-email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bulk-phone">Phone Number</label>
+                                <input type="tel" id="bulk-phone" placeholder="(555) 123-4567">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bulk-organization">Organization/Church</label>
+                                <input type="text" id="bulk-organization" placeholder="Organization name (optional)">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bulk-quantity">Estimated Quantity *</label>
+                                <select id="bulk-quantity" required>
+                                    <option value="">Select quantity range</option>
+                                    <option value="25-50">25-50 items</option>
+                                    <option value="51-100">51-100 items</option>
+                                    <option value="101-250">101-250 items</option>
+                                    <option value="250+">250+ items</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bulk-timeline">Timeline</label>
+                                <select id="bulk-timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="asap">ASAP (Rush order)</option>
+                                    <option value="2-weeks">2-3 weeks</option>
+                                    <option value="4-weeks">4-6 weeks</option>
+                                    <option value="flexible">Flexible timeline</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bulk-notes">Project Details *</label>
+                                <textarea id="bulk-notes" required rows="4" placeholder="Tell us about your project, preferred designs, colors, scripture themes, and any special requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <i class="fas fa-paper-plane"></i>
+                                Request Custom Quote
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Community Says</h2>
+                    <p class="section-subtitle">Real stories from customers and supporters.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Premium feel and meaningful designs—my go-to gift shop now."</p>
+                        <div class="testimonial-author">— Community Member</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Love that 2% goes to InHand Ethiopia. Fashion with purpose."</p>
+                        <div class="testimonial-author">— Customer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Great quality and mission-driven. Proud to wear Grace &amp; Grind."</p>
+                        <div class="testimonial-author">— Supporter</div>
+                    </div>
+                </div>
+                <!-- TODO: Replace quotes with your original testimonies -->
+            </div>
+        </section>
+    <section id="contact" style="background: var(--gradient-section); padding: var(--section-padding) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle">Ready to live your faith boldly? We're here to help you on your kingdom entrepreneurship journey.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                    <div class="enhanced-card">
+                        <h3 style="color: var(--accent-color); margin-bottom: 2rem; font-family: var(--font-display);">Get in Touch</h3>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                            <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Email</h4>
+                                <p style="color: var(--text-secondary);">nate.nibret@graceandgrind.org</p>
+                                <p style="color: var(--text-secondary);">graceandgrindllc@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                            <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Phone</h4>
+                                <p style="color: var(--text-secondary);">701-367-1788</p>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">Mon-Fri: 9AM-6PM EST</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                            <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Service Area</h4>
+                                <p style="color: var(--text-secondary);">Serving Kingdom Entrepreneurs Nationwide & Beyond</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Response Times</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">General Inquiries: 24-48 hours</p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Bulk Orders: Same day</p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Support: 1-2 business days</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="enhanced-card">
+                        <h3 style="color: var(--accent-color); margin-bottom: 2rem; font-family: var(--font-display);">Send us a Message</h3>
+                        
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" required placeholder="Your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" placeholder="(555) 123-4567">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-subject">Subject *</label>
+                                <select id="contact-subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="bulk">Bulk Order</option>
+                                    <option value="custom">Custom Design</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="support">Customer Support</option>
+                                    <option value="wholesale">Wholesale Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-message">Message *</label>
+                                <textarea id="contact-message" required rows="5" placeholder="Tell us how we can help you live your faith boldly..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" style="background: var(--background-dark); padding: var(--section-padding) 0; text-align: center;">
+            <div class="container">
+                <h2 class="section-title">Join Our Community</h2>
+                <p class="section-subtitle">Be part of Grace & Grind! Get updates, devotionals, and exclusive offers.</p>
+                <a href="https://beacons.ai/graceandgrind" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 2rem;">
+                    <i class="fas fa-users"></i>
+                    Join Our Community
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grace & Grind</h3>
+                    <p style="color: var(--text-secondary); max-width: 300px; line-height: 1.6;">
+                        Faith that plans. Grace that grinds. Premium faith-forward apparel and essentials crafted for purpose, conversation, and impact.
+                    </p>
+                    <div class="social-links" style="margin-top: 2rem;">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://x.com" target="_blank" rel="noopener" class="social-link" aria-label="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About & Mission</a>
+                    <a href="#shop">Shop Collections</a>
+                    <a href="#daily-faith">Daily Faith</a>
+                    <a href="#bulk-orders">Bulk Orders</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Shop Collections</h3>
+                    <a href="#apparel-adult">Adult Collection</a>
+                    <a href="#apparel-youth">Youth Collection</a>
+                    <a href="#apparel-kids">Kids Collection</a>
+                    <a href="#apparel-baby">Baby Collection</a>
+                    <a href="#lifestyle-accessories">Accessories</a>
+                    <a href="#new-arrivals">New Arrivals</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Shop With Us</h3>
+                    <a href="https://graceandgrind.myshopify.com" target="_blank" rel="noopener">Shopify Store</a>
+                    <a href="#" onclick="showNotification('Amazon store launching soon!', 'info')">Amazon (Coming Soon)</a>
+                    <a href="#" onclick="showNotification('Etsy shop launching soon!', 'info')">Etsy (Coming Soon)</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <a href="https://beacons.ai/graceandgrind" target="_blank" rel="noopener">Join Our Community</a>
+                    <a href="#daily-faith">Daily Faith & Inspiration</a>
+                    <a href="mailto:nate.nibret@graceandgrind.org">Email Support</a>
+                    <a href="tel:7013671788">Call: (701) 367-1788</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;">nate.nibret@graceandgrind.org</p>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;">graceandgrindllc@gmail.com</p>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;">(701) 367-1788</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Mon-Fri: 9AM-6PM EST</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; <span id="currentYear"></span> Grace & Grind. All rights reserved.</p>
+                </div>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="#privacy" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+                    <a href="#terms" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // State management
+        const state = {
+            mobileMenuOpen: false,
+            verses: [
+                "\"I can do all things through Christ who strengthens me.\" - Philippians 4:13",
+                "\"Commit your work to the Lord, and your plans will be established.\" - Proverbs 16:3",
+                "\"Whatever you do, work heartily, as for the Lord and not for men.\" - Colossians 3:23",
+                "\"Seek first the kingdom of God and his righteousness, and all these things will be added to you.\" - Matthew 6:33",
+                "\"For by grace you have been saved through faith... it is the gift of God.\" - Ephesians 2:8-9"
+            ],
+            affirmations: [
+                "I am fearfully and wonderfully made, equipped to impact the world through my gifts and calling.",
+                "I am called to build with excellence and humility for God's glory.",
+                "God's grace empowers my daily grind and gives me strength.",
+                "My work is worship; I serve with integrity and purpose.",
+                "I am equipped to create value and bless others in everything I do."
+            ],
+            quotes: [
+                "\"Success is not just about what you accomplish in your life, but what you inspire others to do.\" - Grace & Grind",
+                "\"Excellence is worship when it's done unto the Lord.\" - Grace & Grind",
+                "\"Purpose over popularity. Impact over impressions.\" - Grace & Grind",
+                "\"Build with faith, lead with grace, and grind with purpose.\" - Grace & Grind",
+                "\"Your business is your ministry when you operate with kingdom principles.\" - Grace & Grind"
+            ]
+        };
+
+        // Utility functions
+        function showNotification(message, type = 'success') {
+            // Remove existing notification
+            const existing = document.querySelector('.notification');
+            if (existing) {
+                existing.remove();
+            }
+
+            const notification = document.createElement('div');
+            notification.className = `notification ${type} show`;
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}" style="font-size: 1.2rem;"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        function showBulkForm() {
+            scrollToSection('bulk-orders');
+            showNotification('Ready to outfit your team? Fill out the bulk order form below!', 'info');
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const headerHeight = document.querySelector('.header').offsetHeight + 60; // Account for announcement bar
+                const targetPosition = section.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Announcement bar functions
+        function closeAnnouncementBar() {
+            const bar = document.getElementById('announcementBar');
+            if (bar) {
+                bar.style.display = 'none';
+                // Adjust header position
+                const header = document.querySelector('.header');
+                if (header) {
+                    header.style.top = '0';
+                }
+                // Adjust hero margin
+                const hero = document.querySelector('.hero');
+                if (hero) {
+                    hero.style.marginTop = '85px';
+                }
+            }
+        }
+
+        // Mobile menu functions
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                mobileNav.classList.toggle('active');
+                state.mobileMenuOpen = !state.mobileMenuOpen;
+            }
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                mobileNav.classList.remove('active');
+                state.mobileMenuOpen = false;
+            }
+        }
+
+        // Daily Faith functions
+        function rotateVerse() {
+            const el = document.getElementById('daily-verse');
+            if (el && state.verses.length > 0) {
+                const randomIndex = Math.floor(Math.random() * state.verses.length);
+                el.textContent = state.verses[randomIndex];
+            }
+        }
+
+        function rotateAffirmation() {
+            const el = document.getElementById('daily-affirmation');
+            if (el && state.affirmations.length > 0) {
+                const randomIndex = Math.floor(Math.random() * state.affirmations.length);
+                el.textContent = state.affirmations[randomIndex];
+            }
+        }
+
+        function rotateQuote() {
+            const el = document.getElementById('daily-quote');
+            if (el && state.quotes.length > 0) {
+                const randomIndex = Math.floor(Math.random() * state.quotes.length);
+                el.textContent = state.quotes[randomIndex];
+            }
+        }
+
+        function shareVerse() {
+            const el = document.getElementById('daily-verse');
+            if (!el) return;
+            
+            const text = `Daily Scripture - ${el.textContent} #GraceAndGrind #Faith`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Daily Scripture',
+                    text: text
+                }).catch(() => {
+                    fallbackCopy(text);
+                });
+            } else {
+                fallbackCopy(text);
+            }
+        }
+
+        function fallbackCopy(text) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showNotification('Verse copied to clipboard!', 'success');
+                }).catch(() => {
+                    showNotification('Unable to copy verse. Please copy manually.', 'error');
+                });
+            } else {
+                showNotification('Sharing not available on this device.', 'info');
+            }
+        }
+
+        function submitPrayer() {
+            const textarea = document.getElementById('prayer-request');
+            if (!textarea || !textarea.value.trim()) {
+                showNotification('Please enter your prayer request.', 'error');
+                return;
+            }
+
+            // Simulate submission
+            showNotification('Thank you for your prayer request. Our community will pray for you.', 'success');
+            textarea.value = '';
+        }
+
+        // Form submission handlers
+        function handleBulkSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Basic validation
+            const requiredFields = ['bulk-name', 'bulk-email', 'bulk-quantity', 'bulk-notes'];
+            for (let field of requiredFields) {
+                if (!formData.get(field) && !document.getElementById(field).value.trim()) {
+                    showNotification('Please fill in all required fields.', 'error');
+                    return;
+                }
+            }
+
+            // Simulate form submission
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                showNotification('Bulk order request submitted! We\'ll contact you within 24 hours.', 'success');
+                form.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Basic validation
+            const requiredFields = ['contact-name', 'contact-email', 'contact-subject', 'contact-message'];
+            for (let field of requiredFields) {
+                if (!formData.get(field) && !document.getElementById(field).value.trim()) {
+                    showNotification('Please fill in all required fields.', 'error');
+                    return;
+                }
+            }
+
+            // Simulate form submission
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+                form.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+
+        // Smooth scrolling for navigation links
+        function initSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight + 60;
+                        const targetPosition = target.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        closeMobileMenu();
+                    }
+                });
+            });
+        }
+
+        // Header scroll effect
+        function initHeaderEffects() {
+            const header = document.querySelector('.header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(10, 10, 10, 0.98)';
+                    header.style.boxShadow = '0 8px 40px rgba(0,0,0,0.3)';
+                } else {
+                    header.style.background = 'rgba(10, 10, 10, 0.95)';
+                    header.style.boxShadow = 'none';
+                }
+            }, { passive: true });
+        }
+
+        // Scroll to top button
+        function initScrollToTop() {
+            const btn = document.getElementById('scrollToTop');
+            if (!btn) return;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            }, { passive: true });
+
+            btn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initSmoothScrolling();
+            initHeaderEffects();
+            initScrollToTop();
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const mobileNav = document.getElementById('mobileNav');
+                const menuBtn = document.querySelector('.mobile-menu-btn');
+                
+                if (state.mobileMenuOpen && 
+                    mobileNav && 
+                    menuBtn &&
+                    !mobileNav.contains(e.target) && 
+                    !menuBtn.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Escape key to close mobile menu
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && state.mobileMenuOpen) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Welcome message
+            setTimeout(() => {
+                showNotification('Welcome to Grace & Grind! Where faith meets entrepreneurial excellence.', 'success');
+            }, 2000);
+        });
+
+        // Form validation helpers
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePhone(phone) {
+            const re = /^[\+]?[1-9][\d]{0,15}$/;
+            const cleanPhone = phone.replace(/[\s\-\(\)\.]/g, '');
+            return re.test(cleanPhone);
+        }
+
+        // Add real-time form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('form');
+            
+            forms.forEach(form => {
+                const inputs = form.querySelectorAll('input[type="email"]');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', function() {
+                        if (this.value && !validateEmail(this.value)) {
+                            this.style.borderColor = '#ef4444';
+                            showNotification('Please enter a valid email address.', 'error');
+                        } else {
+                            this.style.borderColor = '';
+                        }
+                    });
+                });
+
+                const phoneInputs = form.querySelectorAll('input[type="tel"]');
+                phoneInputs.forEach(input => {
+                    input.addEventListener('blur', function() {
+                        if (this.value && !validatePhone(this.value)) {
+                            this.style.borderColor = '#ef4444';
+                            showNotification('Please enter a valid phone number.', 'error');
+                        } else {
+                            this.style.borderColor = '';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+            console.log('Page load time:', loadTime + 'ms');
+        });
+
+        // Analytics placeholder
+        function trackEvent(eventName, properties = {}) {
+            console.log('Analytics Event:', eventName, properties);
+        }
+
+        // Track page interactions
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.btn')) {
+                trackEvent('button_click', {
+                    button_text: e.target.textContent.trim(),
+                    button_class: e.target.className
+                });
+            }
+        });
+    </script>
+</body>
+</html>
