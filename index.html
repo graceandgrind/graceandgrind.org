@@ -1309,44 +1309,15 @@
                             <i class="fas fa-shopping-bag"></i>
                             Shop Collection
                         </a>
-                       <<!-- Shopify Buy Button Embed -->
-<div id="shopify-buy-button"></div>
-
-<script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
-<script>
-(function () {
-  var client = ShopifyBuy.buildClient({
-    domain: 'yqauwm-p1.myshopify.com',   // your Shopify store backend
-    storefrontAccessToken: 'YOUR_STOREFRONT_ACCESS_TOKEN' // replace with real token
-  });
-
-  ShopifyBuy.UI.onReady(client).then(function (ui) {
-    ui.createComponent('collection', {
-      id: 'YOUR_COLLECTION_ID',  // e.g., All Products or specific collection
-      node: document.getElementById('shopify-buy-button'),
-      moneyFormat: '%24%7B%7Bamount%7D%7D',
-      options: {
-        productSet: {
-          styles: {
-            products: {
-              '@media (min-width: 601px)': {
-                'max-width': 'calc(25% - 20px)',
-                'margin-left': '20px',
-                'margin-bottom': '50px'
-              }
-            }
-          }
-        },
-        cart: {
-          popup: true
-        }
-      }
-    });
-  });
-})();
-</script>
-
-
+                       <a
+  class="btn-shop external" 
+  href="#shopify-products"
+  target="_blank" 
+  rel="noopener noreferrer"
+  onclick="window.open(this.href, '_blank'); return false;"
+>
+  Shop Shopify
+</a>
 
 
                         <a href="#bulk-orders" class="btn btn-secondary">
@@ -1432,7 +1403,7 @@
                         <i class="fab fa-shopify card-icon"></i>
                         <h3>Shopify Store</h3>
                         <p>Our main collection with exclusive designs, early access to new drops, and member benefits.</p>
-                        <a href="https://graceandgrind.myshopify.com" class="btn btn-shopify" target="_blank" rel="noopener">
+                        <a href="#shopify-products" class="btn btn-shopify" target="_blank" rel="noopener">
                             <i class="fas fa-external-link-alt"></i>
                             Shop Shopify
                         </a>
@@ -1471,32 +1442,32 @@
 
                 <!-- Collection Categories -->
                 <div class="collection-categories">
-                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/adult" target="_blank" rel="noopener">
+                    <a class="category-card" href="#shopify-products" target="_blank" rel="noopener">
                         <i class="fas fa-tshirt category-icon"></i>
                         <h4>Adult Collection</h4>
                         <p>Premium tees & hoodies</p>
                     </a>
-                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/youth" target="_blank" rel="noopener">
+                    <a class="category-card" href="#shopify-products" target="_blank" rel="noopener">
                         <i class="fas fa-user-group category-icon"></i>
                         <h4>Youth Collection</h4>
                         <p>Bold faith-forward designs</p>
                     </a>
-                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/kids" target="_blank" rel="noopener">
+                    <a class="category-card" href="#shopify-products" target="_blank" rel="noopener">
                         <i class="fas fa-child category-icon"></i>
                         <h4>Kids Collection</h4>
                         <p>Playful & durable</p>
                     </a>
-                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/baby" target="_blank" rel="noopener">
+                    <a class="category-card" href="#shopify-products" target="_blank" rel="noopener">
                         <i class="fas fa-baby category-icon"></i>
                         <h4>Baby Collection</h4>
                         <p>Little lights of Jesus</p>
                     </a>
-                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/accessories" target="_blank" rel="noopener">
+                    <a class="category-card" href="#shopify-products" target="_blank" rel="noopener">
                         <i class="fas fa-gem category-icon"></i>
                         <h4>Accessories</h4>
                         <p>Hats, mugs & more</p>
                     </a>
-                    <a class="category-card" href="https://graceandgrind.myshopify.com/collections/new-arrivals" target="_blank" rel="noopener">
+                    <a class="category-card" href="#shopify-products" target="_blank" rel="noopener">
                         <i class="fas fa-star category-icon"></i>
                         <h4>New Arrivals</h4>
                         <p>Latest drops</p>
@@ -1518,7 +1489,7 @@
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Cozy heavyweight fleece with inspiring message</p>
                         <div class="product-price">$59</div>
                         <div style="display: flex; gap: 1rem;">
-                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                            <a href="#shopify-products" class="btn btn-primary" style="flex: 1; justify-content: center;">
                                 <i class="fas fa-cart-plus"></i> Shop Now
                             </a>
                             <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
@@ -1535,7 +1506,7 @@
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Minimal design, maximum statement</p>
                         <div class="product-price">$24</div>
                         <div style="display: flex; gap: 1rem;">
-                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                            <a href="#shopify-products" class="btn btn-primary" style="flex: 1; justify-content: center;">
                                 <i class="fas fa-cart-plus"></i> Shop Now
                             </a>
                             <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
@@ -1552,7 +1523,7 @@
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Soft, breathable fabric with Scripture</p>
                         <div class="product-price">$19</div>
                         <div style="display: flex; gap: 1rem;">
-                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                            <a href="#shopify-products" class="btn btn-primary" style="flex: 1; justify-content: center;">
                                 <i class="fas fa-cart-plus"></i> Shop Now
                             </a>
                             <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
@@ -1569,7 +1540,7 @@
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Bold biblical statement (1 Peter 2:17)</p>
                         <div class="product-price">$29</div>
                         <div style="display: flex; gap: 1rem;">
-                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                            <a href="#shopify-products" class="btn btn-primary" style="flex: 1; justify-content: center;">
                                 <i class="fas fa-cart-plus"></i> Shop Now
                             </a>
                             <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
@@ -1586,7 +1557,7 @@
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Premium cotton blend sweatshirt</p>
                         <div class="product-price">$45</div>
                         <div style="display: flex; gap: 1rem;">
-                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                            <a href="#shopify-products" class="btn btn-primary" style="flex: 1; justify-content: center;">
                                 <i class="fas fa-cart-plus"></i> Shop Now
                             </a>
                             <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
@@ -1603,7 +1574,7 @@
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Inspirational message hoodie</p>
                         <div class="product-price">$55</div>
                         <div style="display: flex; gap: 1rem;">
-                            <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="flex: 1; justify-content: center;">
+                            <a href="#shopify-products" class="btn btn-primary" style="flex: 1; justify-content: center;">
                                 <i class="fas fa-cart-plus"></i> Shop Now
                             </a>
                             <button class="btn btn-secondary" onclick="showBulkForm()" style="flex: 1; justify-content: center;">
@@ -1632,7 +1603,7 @@
                         <h3 class="product-title">New Drop Collection</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Latest faith-inspired designs</p>
                         <div class="product-price">Starting at $25</div>
-                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <a href="#shopify-products" class="btn btn-primary" style="width: 100%; justify-content: center;">
                             <i class="fas fa-shopping-bag"></i> Shop Youth
                         </a>
                     </div>
@@ -1655,7 +1626,7 @@
                         <h3 class="product-title">Kids Faith Wear</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Fun designs that teach biblical values</p>
                         <div class="product-price">$20 - $35</div>
-                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <a href="#shopify-products" class="btn btn-primary" style="width: 100%; justify-content: center;">
                             <i class="fas fa-shopping-bag"></i> Shop Kids
                         </a>
                     </div>
@@ -1678,7 +1649,7 @@
                         <h3 class="product-title">Baby Bodysuits & Onesies</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Soft organic cotton with sweet Scripture</p>
                         <div class="product-price">$15 - $25</div>
-                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <a href="#shopify-products" class="btn btn-primary" style="width: 100%; justify-content: center;">
                             <i class="fas fa-shopping-bag"></i> Shop Baby
                         </a>
                     </div>
@@ -1724,7 +1695,7 @@
                         <h3 class="product-title">Faith Caps & Hats</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Stylish headwear with kingdom messages</p>
                         <div class="product-price">$20 - $30</div>
-                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <a href="#shopify-products" class="btn btn-primary" style="width: 100%; justify-content: center;">
                             <i class="fas fa-shopping-bag"></i> Shop Accessories
                         </a>
                     </div>
@@ -1736,7 +1707,7 @@
                         <h3 class="product-title">Inspirational Mugs</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 1rem;">Start your day with faith and coffee</p>
                         <div class="product-price">$15 - $20</div>
-                        <a href="https://graceandgrind.myshopify.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <a href="#shopify-products" class="btn btn-primary" style="width: 100%; justify-content: center;">
                             <i class="fas fa-shopping-bag"></i> Shop Mugs
                         </a>
                     </div>
@@ -1780,7 +1751,7 @@
                         <i class="fab fa-shopify card-icon"></i>
                         <h3>Shopify Store</h3>
                         <p>Our main collection with exclusive designs, early access to new drops, and member benefits.</p>
-                        <a href="https://graceandgrind.myshopify.com" class="btn btn-shopify" target="_blank" rel="noopener">
+                        <a href="#shopify-products" class="btn btn-shopify" target="_blank" rel="noopener">
                             <i class="fas fa-external-link-alt"></i>
                             Shop Shopify
                         </a>
@@ -2156,7 +2127,7 @@
 
                 <div class="footer-section">
                     <h3>Shop With Us</h3>
-                    <a href="https://graceandgrind.myshopify.com" target="_blank" rel="noopener">Shopify Store</a>
+                    <a href="#shopify-products" target="_blank" rel="noopener">Shopify Store</a>
                     <a href="#" onclick="showNotification('Amazon store launching soon!', 'info')">Amazon (Coming Soon)</a>
                     <a href="#" onclick="showNotification('Etsy shop launching soon!', 'info')">Etsy (Coming Soon)</a>
                 </div>
@@ -2584,5 +2555,46 @@
             }
         });
     </script>
+
+<!-- ===== Shopify Embedded Products ===== -->
+<section id="shopify-products" style="background: var(--background-dark); padding: var(--section-padding) 0;">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Shop (Powered by Shopify)</h2>
+      <p class="section-subtitle">Browse and checkout securely without leaving graceandgrind.org.</p>
+    </div>
+    <div id="shopify-embed"></div>
+    <noscript>
+      <p style="text-align:center;">JavaScript is required to load products.</p>
+    </noscript>
+  </div>
+</section>
+
+<!-- Shopify Buy Button SDK and init -->
+<script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+<script>
+(function () {
+  var client = ShopifyBuy.buildClient({
+    domain: 'yqauwm-p1.myshopify.com',
+    storefrontAccessToken: 'REPLACE_WITH_YOUR_STOREFRONT_TOKEN'
+  });
+  function initUI() {
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('collection', {
+        id: 'REPLACE_WITH_YOUR_COLLECTION_ID',
+        node: document.getElementById('shopify-embed'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+          cart: { popup: true },
+          product: { buttonDestination: 'checkout' }
+        }
+      });
+    });
+  }
+  if (window.ShopifyBuy && window.ShopifyBuy.UI) { initUI(); }
+  else { document.addEventListener('DOMContentLoaded', initUI); }
+})();
+</script>
+
 </body>
 </html>
