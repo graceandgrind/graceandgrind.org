@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop (Powered by Shopify) • Grace & Grind</title>
+  <meta name="description" content="Browse and checkout securely without leaving graceandgrind.org." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--bg:#0b0b0b;--panel:#141414;--ink:#fff;--ink2:#cfcfcf;--accent:#96bf47;--accent2:#ffd34d;--ring:#2b2b2b;--radius:14px}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:1200px;margin:32px auto;padding:0 20px}
+    .topbar{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+    .back{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--ring);border-radius:999px;text-decoration:none;color:var(--ink2);background:transparent}
+    .back:hover{border-color:#3b3b3b}
+    h1{font-size:32px;margin:10px 0 6px}
+    .sub{color:var(--ink2);margin:0 0 22px}
+    .shop-card{background:var(--panel);border:1px solid var(--ring);border-radius:var(--radius);padding:18px}
+    #shopify-embed{margin-top:10px}
+
+    .shopify-buy__product{background:#121212;border:1px solid var(--ring);border-radius:12px;padding:14px}
+    .shopify-buy__btn{background:linear-gradient(135deg,#96bf47,#78b22b)!important;border-radius:999px!important;border:none!important}
+    .shopify-buy__product__title{color:#fff!important}
+    .shopify-buy__price{color:var(--accent2)!important;font-weight:800!important}
+
+    .shopify-buy__modal{z-index:9999}
+    .shopify-buy__cart-toggle{background:#59c13a!important;color:#001b05!important}
+    .shopify-buy__cart{z-index:99999}
+    @media (max-width:640px){h1{font-size:26px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="back" href="/" aria-label="Back to site">← Back to site</a>
+    </div>
+
+    <h1>Shop <span style="color:var(--accent2)">(Powered by Shopify)</span></h1>
+    <p class="sub">Browse and checkout securely without leaving graceandgrind.org.</p>
+
+    <div class="shop-card">
+      <div id="shopify-embed"></div>
+      <noscript><p style="color:#ccc">Enable JavaScript to view products.</p></noscript>
+    </div>
+  </div>
+
+  <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+  <script>
+  (function () {
+    var client = ShopifyBuy.buildClient({
+      domain: 'yqauwm-p1.myshopify.com',
+      storefrontAccessToken: 'f889ab4ffcf61b5e05a41830e48f1046'
+    });
+
+    function mount() {
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('collection', {
+          id: '445640245469',
+          node: document.getElementById('shopify-embed'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
+            product: {
+              contents: { img: true, title: true, price: true, options: false, quantity: false, button: true },
+              text: { button: 'View details' },
+              buttonDestination: 'modal',
+              styles: {
+                product: {
+                  '@media (min-width: 601px)': {
+                    'max-width': 'calc(25% - 18px)',
+                    'margin-left': '18px',
+                    'margin-bottom': '18px',
+                    'width': 'calc(25% - 18px)'
+                  }
+                }
+              }
+            },
+            modalProduct: {
+              contents: { img: false, imgWithCarousel: true, button: true, buttonWithQuantity: true, description: true },
+              text: { button: 'Add to cart' },
+              styles: { product: { '@media (min-width: 601px)': { 'max-width': '100%', 'margin': '0' } } }
+            },
+            cart: { popup: true, startOpen: false, text: { total: 'Subtotal', empty: 'Your cart is empty' } },
+            toggle: { sticky: true, contents: { count: true, icon: true }, text: { title: 'Cart' } },
+            productSet: { styles: { products: { '@media (min-width: 601px)': { 'margin-left': '-18px' } } } }
+          }
+        });
+      });
+    }
+
+    if (window.ShopifyBuy && window.ShopifyBuy.UI) { mount(); }
+    else { document.addEventListener('DOMContentLoaded', mount); }
+  })();
+  </script>
+</body>
+</html>
